@@ -19,6 +19,7 @@ public class ThreadCloseGraceful {
 
         public void shutdown() {
             this.start = false;
+            System.out.println("flag has changed");
         }
     }
 
@@ -27,7 +28,7 @@ public class ThreadCloseGraceful {
         worker.start();
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
